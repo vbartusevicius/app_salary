@@ -28,6 +28,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'company_salary.apps.CompanySalaryConfig',
+    'salary_updater.apps.SalaryUpdaterConfig',
     
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -43,6 +44,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'app_salary.urls'
@@ -74,7 +76,7 @@ DATABASES = {
         'NAME': '',
         'USER': '',
         'PASSWORD': '',
-        'HOST': ''
+        'HOST': '',
     }
 }
 
